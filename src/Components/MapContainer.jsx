@@ -25,7 +25,17 @@ const MapContainer = (props) => {
                     </Popup>
                 </Marker>
 
-                
+                {
+                    props.medicalStaff.map(item => {
+                        return (
+                            <div key={item.key}>
+                                <Marker position={item.position}>
+                                    <Popup>{item.title} <br/> {item.content}</Popup>
+                                </Marker>
+                            </div>
+                        )
+                    })
+                }
             </Map>
 
         </Fragment>

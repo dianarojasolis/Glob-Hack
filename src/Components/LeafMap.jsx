@@ -15,7 +15,8 @@ const LeafMap = () => {
             try {
                 const data = await fetch('https://raw.githubusercontent.com/tamaramunoz/Glob-Hack/master/src/BackEnd/HealthPersonnelUbication.json')
                 const infoStaffLocation = await data.json()
-                console.log(infoStaffLocation)
+                // console.log(infoStaffLocation)
+                setMedicalStaff(infoStaffLocation)
 
             } catch (error) {
                 console.log(error)
@@ -35,7 +36,7 @@ const LeafMap = () => {
             <MapContainer 
                 center={center}
                 zoom={zoom}
-            
+                medicalStaff={medicalStaff}
             />
         </div>
     )
