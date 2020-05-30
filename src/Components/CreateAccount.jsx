@@ -1,46 +1,87 @@
 import React from 'react'
+import { auth, db } from "../BackEnd/firebase";
+import { Link, withRouter } from "react-router-dom";
 import Logo from '../img/logo.png'
 
+const CreateAccount = (props) => {
+  const [email, setEmail] = React.useState("");
+  const [name, setName] = React.useState("");
+  const [rut, setRut] = React.useState("");
+  const [prevision, setPrevision] = React.useState("");
+  const [phone, setPhone] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const [error, setError] = React.useState(null);
+  // const [register, setRegister] = React.useState(true);
 
 
+  const processingData = (e) => {
+    e.preventDefault();
 
-const CreateAccount = () => {
+    if (!name.trim()) {
+      console.log("Ingrese Nombre");
+      setError("Ingrese Nombre");
+      return;
+    }
+    if (!rut.trim()) {
+      console.log("Rut no valido");
+      setError("Rut no valido");
+      return;
+    }
+    if (!email.trim()) {
+      console.log("Ingrese Email");
+      setError("Ingrese Email");
+      return;
+    }
+    if (!password.trim()) {
+      setError("Ingrese Password");
+      return;
+    }
+    if (password.length < 6) {
+      setError("EL password debe ser de 6 caracteres");
+      return;
+    }
+    console.log("correcto");
+    setError(null);
 
-    const [email, setEmail] = React.useState("");
-    const [name, setName] = React.useState("");
-    const [rut, setRut] = React.useState("");
-    const [prevision, setPrevision] = React.useState("");
-    const [phone, setPhone] = React.useState("");
-    const [password, setPassword] = React.useState("");
-    const [error, setError] = React.useState(null);
-    const [register, setRegister] = React.useState(true)
+    // if (register) {
+    //   registerAccount();
+    // }
+    // else {
+    //   login()
+    // }
+  };
+  const registerAccount = React.useCallback(async () => {
+    try {
+      const res = await auth.createUserWithEmailAndPassword(email, password);
+      await db.collection("users").doc(res.user.email).set({
+        email: res.user.email,
+        uid: res.user.uid,
+        name: name,
+        rut: rut,
+        phone: phone,
+        prevision: prevision,
+      });
+      setName("");
+      setEmail("");
+      setPassword("");
+      setPhone("");
+      setRut("");
+      setError(null);
+      props.history.push("/Home");
 
-    const processingData = (e) =>{ 
-        e.preventDefault();
-      
-        if (!name.trim()) {
-          console.log("Ingrese Nombre");
-          setError("Ingrese Nombre");
-          return;
-        }
-        if (!email.trim()) {
-          console.log("Ingrese Email");
-          setError("Ingrese Email");
-          return;
-        }
-        if (!password.trim()) {
-          setError("Ingrese Password");
-          return;
-        }
-        if (password.length < 6) {
-          setError("EL password debe ser de 6 caracteres");
-          return;
-        }
-        console.log('correcto')
-        setError(null)
-      
-      
+      console.log(res.user);
+    } catch (error) {
+      console.log(error);
+      if (error.code === "auth/invalid-email") {
+        setError("Email no valido");
       }
+
+      if (error.code === "auth/email-already-in-use") {
+        setError("Email ya utilizado");
+      }
+    }
+  }, [name, rut, phone, prevision, email, password, props.history]);
+
 
     return (
 
@@ -137,14 +178,23 @@ const CreateAccount = () => {
           >
             Continuar     
           </button> 
+          <div class="row">
+            <div class="col-sm-12 mt-5"></div>
+          <Link to="/Login">
+          <button bgcolor="true">¿ya estas registrado?</button>
+        </Link>
+        </div>
           </div>
           </div>
           </div>
           
+          
+
       </form>
         </div>
     )
 }
 
 
-export default CreateAccount
+export default withRouter(CreateAccount);
+
