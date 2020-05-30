@@ -1,5 +1,4 @@
 import React from 'react'
-import { auth } from "../firebase";
 
 
 const CreateAccount = () => {
@@ -42,7 +41,7 @@ const CreateAccount = () => {
 
     return (
         <div>
-            <form>
+            <form onSubmit={processingData}>
     
           <input
             type="text"
