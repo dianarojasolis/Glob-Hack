@@ -1,5 +1,6 @@
 import React from 'react'
-import { auth } from "../BackEnd/firebase";
+import { auth } from "../Backend/firebase";
+
 
 
 const CreateAccount = () => {

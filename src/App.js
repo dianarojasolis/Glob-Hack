@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import CreateAccount from "./Components/CreateAccount.jsx";
 import Home from "./Components/Home.jsx";
 import Login from "./Components/Login.jsx";
+import LeafMap from "./Components/LeafMap"
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
           </Route>
           <Route path="/Home">
             <Home />
+          </Route>
+          <Route path="/map">
+            <LeafMap />
           </Route>
         </Switch>
       </Router>
