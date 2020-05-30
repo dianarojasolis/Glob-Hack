@@ -1,6 +1,9 @@
 import React from "react";
 import { auth, db } from "../BackEnd/firebase";
 import { Link, withRouter } from "react-router-dom";
+import Logo from '../img/logo.png';
+
+
 
 const CreateAccount = (props) => {
   const [email, setEmail] = React.useState("");
@@ -76,7 +79,7 @@ const CreateAccount = (props) => {
       }
 
       if (error.code === "auth/email-already-in-use") {
-        setError("Email ya utilizado");
+              setError("Email ya utilizado");
       }
     }
   }, [name, rut, phone, prevision, email, password, props.history]);
