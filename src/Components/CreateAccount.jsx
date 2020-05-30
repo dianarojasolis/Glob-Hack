@@ -1,5 +1,5 @@
 import React from "react";
-import { auth, db } from "../BackEnd/firebase";
+import { auth, db } from "../Firebase/firebase";
 import { Link, withRouter } from "react-router-dom";
 
 const CreateAccount = (props) => {
@@ -147,3 +147,4 @@ const CreateAccount = (props) => {
 };
 
 export default withRouter(CreateAccount);
+

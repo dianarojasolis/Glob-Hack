@@ -1,0 +1,131 @@
+[
+    {   
+        "key": "marker1",
+        "position": [-33.438194, -70.642138],
+        "content": "Olivia Correa",
+        "title": "Técnico en Nivel Superior en Salud",
+        "type": "Enfermeras"
+    },
+
+    {
+        "key": "marker2",
+        "position": [-33.4370183, -70.6436618],
+        "content": "Raúl Jiménez",
+        "title": "Kinesiólogo",
+        "type": "Kinesiólogos"
+    },
+
+    {
+        "key": "marker3",
+        "position": [-33.4374349, -70.6419652],
+        "content": "Natali Guaquiante",
+        "title": "Técnico en Nivel Superior en Salud",
+        "type": "Enfermeras"
+    },
+
+    {
+        "key": "marker4",
+        "position": [-33.4435671, -70.6147247],
+        "content": "Rosario de Lourdes",
+        "title": "Técnico en Nivel Superior en Salud",
+        "type": "Enfermeras"
+    },
+
+    {
+        "key": "marker5",
+        "position": [-33.4401366, -70.6228782],
+        "content": "María José",
+        "title": "Técnico en Nivel Superior en Salud",
+        "type": "Enfermeras"
+    },
+
+    {
+        "key": "marker6",
+        "position": [-33.439117, -70.6064566],
+        "content": "Valeria Olivares",
+        "title": "Kinesiólogo",
+        "type": "Kinesiólogos"
+    },
+
+    {
+        "key": "marker7",
+        "position": [-33.4365653, -70.6082703],
+        "content": "Eugenio Hidalgo",
+        "title": "Médico Cirujano",
+        "type": "Médicos"
+    },
+
+    {
+        "key": "marker8",
+        "position": [-33.4403529, -70.6273322],
+        "content": "Madelaine Isla",
+        "title": "Enfermera",
+        "type": "Enfermeras"
+    },
+
+    {
+        "key": "marker9",
+        "position": [-33.4469866, -70.625705],
+        "content": "Gustavo Muñoz",
+        "title": "Médico Cirujano",
+        "type": "Médicos"
+    },
+
+    {
+        "key": "marker10",
+        "position": [-33.430936, -70.622553],
+        "content": "Daniela Carrasco",
+        "title": "Médico Cirujano",
+        "type": "Médicos"
+    },
+
+    {
+        "key": "marker11",
+        "position": [-33.4290462, -70.5926258],
+        "content": "Vanessa Alvarado",
+        "title": "Enfermera",
+        "type": "Enfermeras"
+    },
+
+    {
+        "key": "marker12",
+        "position": [-33.4216498, -70.6058502],
+        "content": "Yoselyn Valderas",
+        "title": "Kinesiólogo",
+        "type": "Kinesiólogos"
+    },
+
+    {
+        "key": "marker13",
+        "position": [-33.4291956, -70.5926827],
+        "content": "Ana María Troncoso",
+        "title": "Enfermera",
+        "type": "Enfermeras"
+    },
+
+    {
+        "key": "marker14",
+        "position": [-33.4407509, -70.5920007],
+        "content": "Jovita Torres",
+        "title": "Kinesiólogo",
+        "type": "Kinesiólogos"
+    },
+
+    {
+        "key": "marker15",
+        "position": [-33.4381431, -70.5781578],
+        "content": "Marta López",
+        "title": "Enfermera",
+        "type": "Enfermeras"
+    },
+
+    {
+        "key": "marker16",
+        "position": [-33.4441337, -70.6255336],
+        "content": "Carla Andrea",
+        "title": "Médico Cirujano",
+        "type": "Médicos"
+    }
+
+    
+]
