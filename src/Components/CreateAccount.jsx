@@ -50,7 +50,8 @@ const CreateAccount = () => {
         <div>
             <img className="Logo" alt="" src={Logo} />
             <form onSubmit={processingData}>
-            
+            <div class="container-fluid">
+            <div class="row sm-12">
             <div class="row">
             <div class="col-sm-12 mt-5">
               <label>Nombre</label>
@@ -133,7 +134,8 @@ const CreateAccount = () => {
           </button> 
           </div>
           </div>
-        
+          </div>
+          </div>
       </form>
         </div>
     )
