@@ -1,9 +1,7 @@
 import React from "react";
 import { auth, db } from "../BackEnd/firebase";
 import { Link, withRouter } from "react-router-dom";
-import Logo from '../img/logo.png';
-
-
+import Logo from "../img/logo.png";
 
 const CreateAccount = (props) => {
   const [email, setEmail] = React.useState("");
@@ -43,13 +41,6 @@ const CreateAccount = (props) => {
     }
     console.log("correcto");
     setError(null);
-
-    // if (register) {
-    //   registerAccount();
-    // }
-    // else {
-    //   login()
-    // }
   };
 
   const registerAccount = React.useCallback(async () => {
@@ -79,7 +70,7 @@ const CreateAccount = (props) => {
       }
 
       if (error.code === "auth/email-already-in-use") {
-              setError("Email ya utilizado");
+        setError("Email ya utilizado");
       }
     }
   }, [name, rut, phone, prevision, email, password, props.history]);
@@ -123,7 +114,7 @@ const CreateAccount = (props) => {
         <input
           type="email"
           label="Correo cuidador o paciente"
-          placeholder="juanperezprez@gmail.com"
+          placeholder="example@gmail.com"
           name="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -150,4 +141,3 @@ const CreateAccount = (props) => {
 };
 
 export default withRouter(CreateAccount);
-
