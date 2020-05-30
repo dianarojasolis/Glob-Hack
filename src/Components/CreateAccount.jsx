@@ -1,5 +1,5 @@
 import React from "react";
-import { auth, db } from "../Firebase/firebase";
+import { auth, db } from "../BackEnd/firebase";
 import { Link, withRouter } from "react-router-dom";
 
 const CreateAccount = (props) => {
