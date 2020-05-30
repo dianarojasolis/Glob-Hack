@@ -1,4 +1,5 @@
 import React from 'react'
+import { auth } from "../Firebase/firebase";
 
 
 const CreateAccount = () => {
@@ -35,13 +36,43 @@ const CreateAccount = () => {
         }
         console.log('correcto')
         setError(null)
-      
+
+        if(register){
+            registerAccount()
+          }
       
       }
+      const registerAccount = React.useCallback(async() =>{
+        try {
+          const res = await auth.createUserWithEmailAndPassword( email, password)
+        
+          console.log(res.user)
+          
+        } catch (error) {
+          console.log(error)
+          if(error.code === 'auth/invalid-email'){
+            setError('Email no valido')
+          }
+      
+          if(error.code === 'auth/email-already-in-use'){
+            setError('Email ya utilizado')
+          }
+             
+        }
+      }, [email, password])
 
     return (
         <div>
+            <h3>{register ? "Registro de usuarios" : "Login de accseso"}</h3>
             <form onSubmit={processingData}>
+
+            {
+          error && (
+            <div>
+              {error}
+            </div>
+          )
+        }
     
           <input
             type="text"
@@ -89,11 +120,13 @@ const CreateAccount = () => {
       
           <button 
           type="submit"
-          >     
+          > 
+          {register ? "Registrarse" : "Acceder"}    
           </button>
 
         <button 
-        type="button"> 
+        type="button"
+        onClick={() => setRegister(!register)} > 
         </button>
       </form>
         </div>
