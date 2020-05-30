@@ -1,7 +1,8 @@
 import React from "react";
 import { auth, db } from "../BackEnd/firebase";
+import { Link, withRouter } from "react-router-dom";
 
-const CreateAccount = () => {
+const CreateAccount = (props) => {
   const [email, setEmail] = React.useState("");
   const [name, setName] = React.useState("");
   const [rut, setRut] = React.useState("");
@@ -9,7 +10,7 @@ const CreateAccount = () => {
   const [phone, setPhone] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [error, setError] = React.useState(null);
-  const [register, setRegister] = React.useState(true);
+  // const [register, setRegister] = React.useState(true);
 
   const processingData = (e) => {
     e.preventDefault();
@@ -17,6 +18,11 @@ const CreateAccount = () => {
     if (!name.trim()) {
       console.log("Ingrese Nombre");
       setError("Ingrese Nombre");
+      return;
+    }
+    if (!rut.trim()) {
+      console.log("Rut no valido");
+      setError("Rut no valido");
       return;
     }
     if (!email.trim()) {
@@ -35,10 +41,14 @@ const CreateAccount = () => {
     console.log("correcto");
     setError(null);
 
-    if (register) {
-      registerAccount();
-    }
+    // if (register) {
+    //   registerAccount();
+    // }
+    // else {
+    //   login()
+    // }
   };
+
   const registerAccount = React.useCallback(async () => {
     try {
       const res = await auth.createUserWithEmailAndPassword(email, password);
@@ -50,6 +60,13 @@ const CreateAccount = () => {
         phone: phone,
         prevision: prevision,
       });
+      setName("");
+      setEmail("");
+      setPassword("");
+      setPhone("");
+      setRut("");
+      setError(null);
+      props.history.push("/Home");
 
       console.log(res.user);
     } catch (error) {
@@ -62,16 +79,16 @@ const CreateAccount = () => {
         setError("Email ya utilizado");
       }
     }
-  }, [name, rut, phone, prevision, email, password]);
+  }, [name, rut, phone, prevision, email, password, props.history]);
 
   return (
     <div>
-      <h3>{register ? "Registro de usuarios" : "Login de accseso"}</h3>
       <form onSubmit={processingData}>
         {error && <div>{error}</div>}
 
         <input
           type="text"
+          label="Nombre paciente"
           placeholder="Juan Pérez Pérez"
           name="name"
           value={name}
@@ -80,6 +97,7 @@ const CreateAccount = () => {
 
         <input
           type="num"
+          label="RUT paciente"
           placeholder="12.345.678-9"
           value={rut}
           onChange={(e) => setRut(e.target.value)}
@@ -93,6 +111,7 @@ const CreateAccount = () => {
 
         <input
           type="num"
+          label="Telèfono cuidador o paciente"
           placeholder="+56"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
@@ -100,6 +119,7 @@ const CreateAccount = () => {
 
         <input
           type="email"
+          label="Correo cuidador o paciente"
           placeholder="juanperezprez@gmail.com"
           name="email"
           value={email}
@@ -114,12 +134,16 @@ const CreateAccount = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <button type="submit">{register ? "Registrarse" : "Acceder"}</button>
+        <button onClick={() => registerAccount()} type="button">
+          Registrarme
+        </button>
 
-        <button type="button" onClick={() => setRegister(!register)}></button>
+        <Link to="/Login">
+          <button bgcolor="true">¿ya estas registrado?</button>
+        </Link>
       </form>
     </div>
   );
 };
 
-export default CreateAccount;
+export default withRouter(CreateAccount);
