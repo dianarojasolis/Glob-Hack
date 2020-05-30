@@ -1,5 +1,7 @@
 import React from 'react'
-import { auth } from "../firebase";
+import Logo from '../img/logo.png'
+
+
 
 
 const CreateAccount = () => {
@@ -41,9 +43,19 @@ const CreateAccount = () => {
       }
 
     return (
+
+     
+            
+  
         <div>
-            <form>
-    
+            <img className="Logo" alt="" src={Logo} />
+            <form onSubmit={processingData}>
+            
+            <div class="row">
+            <div class="col-sm-12 mt-5">
+              <label>Nombre</label>
+              </div>
+          </div>
           <input
             type="text"
             placeholder="Juan Pérez Pérez"
@@ -51,27 +63,46 @@ const CreateAccount = () => {
             value={name}
             onChange={e => setName(e.target.value)}
           />
-       
-          <input 
+          
+            <div class="row">
+            <div class="col-sm-12 mt-5">
+          <label>Rut paciente</label>
+          </div>
+          </div>
+          <input className="date"
           type="num" 
           placeholder="12.345.678-9" 
           value={rut}
           onChange={e => setRut(e.target.value)}
           />
-        
+          
+          <div class="row">
+          <div class="col-sm-12 mt-5">
+          <label>Previsión de salud del paciente</label>
+          </div>
+          </div>
           <select onChange={e => setPrevision( e.target.value)}>
             <option value="select"></option>
             <option value="fonasa">Fonasa</option>
             <option value="isapre">Isapre</option>
           </select>
-      
+
+          <div class="row">
+          <div class="col-sm-12 mt-5">
+          </div><label>Teléfono cuidador o paciente</label>
+          </div>
           <input 
           type="num" 
           placeholder="+56"
           value={phone}
           onChange={e => setPhone(e.target.value)}
           />
-      
+
+          <div class="row">
+          <div class="col-sm-12 mt-5">
+          <label>Correo cuidador o paciente</label>
+          </div>
+          </div>
           <input
             type="email"
             placeholder="juanperezprez@gmail.com"
@@ -79,26 +110,34 @@ const CreateAccount = () => {
             value={email}
             onChange={e => setEmail(e.target.value)}
           />
-      
-          <input
+          
+          <div class="row">
+          <div class="col-sm-12 mt-5"></div>
+          <label>Rut</label>
+          </div>
+          
+          <input 
             type="password"
             placeholder="******"
             name="password"
             value={password}
             onChange={e => setPassword(e.target.value)}
           />
-      
-          <button 
-          type="submit"
-          >     
-          </button>
 
-        <button 
-        type="button"> 
-        </button>
+           <div class="row">
+            <div class="col-sm-12 mt-5">
+          <button className="Button"
+          type="submit"
+          >
+            Continuar     
+          </button> 
+          </div>
+          </div>
+        
       </form>
         </div>
     )
 }
+
 
 export default CreateAccount

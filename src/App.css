@@ -1,0 +1,38 @@
+.p{
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-size: 16px;
+}
+
+button{
+    background-color:#37C7D8;
+    font-family: Roboto;
+    color: white;
+    border: 2px;
+    border-radius: 2px;
+    width:210px;
+    height: 40px;
+}
+
+label{
+    display: flex;
+    align-items: center;
+    font-family: Roboto;
+    font-size: 16px;
+}
+input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #8B8B8B;
+    width: 200px;
+    border: none;
+}
+
+.Logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 142px;
+    height: 74px;
+}
+
