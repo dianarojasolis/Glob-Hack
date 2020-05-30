@@ -1,7 +1,7 @@
 
 import React from 'react'
-import Logo from '../img/logo.png";
-  import { auth, db } from "../BackEnd/firebase";
+import Logo from '../img/logo.png';
+import { auth, db } from "../BackEnd/firebase";
 
 
 const CreateAccount = () => {
@@ -62,162 +62,162 @@ const CreateAccount = () => {
       }
 
 
-    return (
+      return (
 
-     
-            
-  
+
+
+
         <div>
-            <img className="Logo" alt="" src={Logo} />
-            <form onSubmit={processingData}>
+          <img className="Logo" alt="" src={Logo} />
+          <form onSubmit={processingData}>
             <div class="container-fluid">
-            <div class="row sm-12">
-            <div class="row">
-            <div class="col-sm-12 mt-5">
-              <label>Nombre</label>
+              <div class="row sm-12">
+                <div class="row">
+                  <div class="col-sm-12 mt-5">
+                    <label>Nombre</label>
+                  </div>
+                </div>
+                <input
+                  type="text"
+                  placeholder="Juan Pérez Pérez"
+                  name="name"
+                  value={name}
+                  onChange={e => setName(e.target.value)}
+                />
+
+                <div class="row">
+                  <div class="col-sm-12 mt-5">
+                    <label>Rut paciente</label>
+                  </div>
+                </div>
+                <input className="date"
+                  type="num"
+                  placeholder="12.345.678-9"
+                  value={rut}
+                  onChange={e => setRut(e.target.value)}
+                />
+
+                <div class="row">
+                  <div class="col-sm-12 mt-5">
+                    <label>Previsión de salud del paciente</label>
+                  </div>
+                </div>
+                <select onChange={e => setPrevision(e.target.value)}>
+                  <option value="select"></option>
+                  <option value="fonasa">Fonasa</option>
+                  <option value="isapre">Isapre</option>
+                </select>
+
+                <div class="row">
+                  <div class="col-sm-12 mt-5">
+                  </div><label>Teléfono cuidador o paciente</label>
+                </div>
+                <input
+                  type="num"
+                  placeholder="+56"
+                  value={phone}
+                  onChange={e => setPhone(e.target.value)}
+                />
+
+                <div class="row">
+                  <div class="col-sm-12 mt-5">
+                    <label>Correo cuidador o paciente</label>
+                  </div>
+                </div>
+                <input
+                  type="email"
+                  placeholder="juanperezprez@gmail.com"
+                  name="email"
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}
+                />
+
+                <div class="row">
+                  <div class="col-sm-12 mt-5"></div>
+                  <label>Rut</label>
+                </div>
+
+                <input
+                  type="password"
+                  placeholder="******"
+                  name="password"
+                  value={password}
+                  onChange={e => setPassword(e.target.value)}
+                />
+
+                <div class="row">
+                  <div class="col-sm-12 mt-5">
+                    <button className="Button"
+                      type="submit"
+                    >
+                      Continuar
+          </button>
+                  </div>
+                </div>
               </div>
-          </div>
-          <input
-            type="text"
-            placeholder="Juan Pérez Pérez"
-            name="name"
-            value={name}
-            onChange={e => setName(e.target.value)}
-          />
-          
-            <div class="row">
-            <div class="col-sm-12 mt-5">
-          <label>Rut paciente</label>
-          </div>
-          </div>
-          <input className="date"
-          type="num" 
-          placeholder="12.345.678-9" 
-          value={rut}
-          onChange={e => setRut(e.target.value)}
-          />
-          
-          <div class="row">
-          <div class="col-sm-12 mt-5">
-          <label>Previsión de salud del paciente</label>
-          </div>
-          </div>
-          <select onChange={e => setPrevision( e.target.value)}>
-            <option value="select"></option>
-            <option value="fonasa">Fonasa</option>
-            <option value="isapre">Isapre</option>
-          </select>
-
-          <div class="row">
-          <div class="col-sm-12 mt-5">
-          </div><label>Teléfono cuidador o paciente</label>
-          </div>
-          <input 
-          type="num" 
-          placeholder="+56"
-          value={phone}
-          onChange={e => setPhone(e.target.value)}
-          />
-
-          <div class="row">
-          <div class="col-sm-12 mt-5">
-          <label>Correo cuidador o paciente</label>
-          </div>
-          </div>
-          <input
-            type="email"
-            placeholder="juanperezprez@gmail.com"
-            name="email"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-          />
-          
-          <div class="row">
-          <div class="col-sm-12 mt-5"></div>
-          <label>Rut</label>
-          </div>
-          
-          <input 
-            type="password"
-            placeholder="******"
-            name="password"
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-          />
-
-           <div class="row">
-            <div class="col-sm-12 mt-5">
-          <button className="Button"
-          type="submit"
-          >
-            Continuar     
-          </button> 
-          </div>
-          </div>
-          </div>
-          </div>
+            </div>
       if (error.code === "auth/email-already-in-use") {
-        setError("Email ya utilizado");
+              setError("Email ya utilizado");
       }
     }
   }, [name, rut, phone, prevision, email, password]);
 
   return (
     <div>
-      <h3>{register ? "Registro de usuarios" : "Login de accseso"}</h3>
-      <form onSubmit={processingData}>
-        {error && <div>{error}</div>}
+              <h3>{register ? "Registro de usuarios" : "Login de accseso"}</h3>
+              <form onSubmit={processingData}>
+                {error && <div>{error}</div>}
 
-        <input
-          type="text"
-          placeholder="Juan Pérez Pérez"
-          name="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+                <input
+                  type="text"
+                  placeholder="Juan Pérez Pérez"
+                  name="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
 
-        <input
-          type="num"
-          placeholder="12.345.678-9"
-          value={rut}
-          onChange={(e) => setRut(e.target.value)}
-        />
+                <input
+                  type="num"
+                  placeholder="12.345.678-9"
+                  value={rut}
+                  onChange={(e) => setRut(e.target.value)}
+                />
 
-        <select onChange={(e) => setPrevision(e.target.value)}>
-          <option value="select"></option>
-          <option value="fonasa">Fonasa</option>
-          <option value="isapre">Isapre</option>
-        </select>
+                <select onChange={(e) => setPrevision(e.target.value)}>
+                  <option value="select"></option>
+                  <option value="fonasa">Fonasa</option>
+                  <option value="isapre">Isapre</option>
+                </select>
 
-        <input
-          type="num"
-          placeholder="+56"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-        />
+                <input
+                  type="num"
+                  placeholder="+56"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                />
 
-        <input
-          type="email"
-          placeholder="juanperezprez@gmail.com"
-          name="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+                <input
+                  type="email"
+                  placeholder="juanperezprez@gmail.com"
+                  name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
 
-        <input
-          type="password"
-          placeholder="******"
-          name="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+                <input
+                  type="password"
+                  placeholder="******"
+                  name="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
 
-        <button type="submit">{register ? "Registrarse" : "Acceder"}</button>
+                <button type="submit">{register ? "Registrarse" : "Acceder"}</button>
 
-        <button type="button" onClick={() => setRegister(!register)}></button>
+                <button type="button" onClick={() => setRegister(!register)}></button>
 
-      </form>
-    </div>
+              </form>
+            </div>
   );
 };
 
