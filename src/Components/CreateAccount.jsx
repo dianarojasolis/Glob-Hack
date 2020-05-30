@@ -48,15 +48,17 @@ const CreateAccount = () => {
             
   
         <div>
-            <img className="Logo" alt="" src={Logo} />
+            
             <form onSubmit={processingData}>
-              
-            <div class="row sm-12">
-            <div class="row">
+             <div className="container">
+             <img className="Logo" alt="" src={Logo} />
+            <div class="row ">
             <div class="col-sm-12 mt-5">
               <label>Nombre</label>
               </div>
           </div>
+          
+          
           <input
             type="text"
             placeholder="Juan Pérez Pérez"
@@ -70,13 +72,16 @@ const CreateAccount = () => {
           <label>Rut paciente</label>
           </div>
           </div>
+          <div class="row">
+            <div class="col-sm-12 mt-5">
           <input className="date"
           type="num" 
           placeholder="12.345.678-9" 
           value={rut}
           onChange={e => setRut(e.target.value)}
           />
-          
+          </div>
+          </div>
           <div class="row">
           <div class="col-sm-12 mt-5">
           <label>Previsión de salud del paciente</label>
@@ -135,6 +140,7 @@ const CreateAccount = () => {
           </div>
           </div>
           </div>
+          
       </form>
         </div>
     )
