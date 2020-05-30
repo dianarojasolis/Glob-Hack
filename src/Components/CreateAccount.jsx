@@ -1,7 +1,8 @@
 import React from "react";
+import { auth, db } from "../BackEnd/firebase";
 import { Link, withRouter } from "react-router-dom";
 import Logo from '../img/logo.png';
-import { auth, db } from "../BackEnd/firebase";
+
 
 
 const CreateAccount = (props) => {
