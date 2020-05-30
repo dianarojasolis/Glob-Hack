@@ -7,7 +7,6 @@ const MapContainer = (props) => {
     const UrlMap = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 
 
-
     return (
         <Fragment>
             <Map

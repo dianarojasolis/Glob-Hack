@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import '../Mapa.css'
 
 import MapContainer from './MapContainer'
@@ -22,7 +22,7 @@ const LeafMap = () => {
                 console.log(error)
             }
         }
-        
+
         getData()
     }, [])
 
@@ -32,13 +32,15 @@ const LeafMap = () => {
     let zoom = 16;
 
     return (
-        <div>
-            <MapContainer 
-                center={center}
-                zoom={zoom}
-                medicalStaff={medicalStaff}
-            />
-        </div>
+        <Fragment>
+            <div>
+                <MapContainer
+                    center={center}
+                    zoom={zoom}
+                    medicalStaff={medicalStaff}
+                />
+            </div>
+        </Fragment>
     )
 }
 
