@@ -6,13 +6,12 @@ const Programming = () => {
     return (
         <Fragment>
         <div>
-        <header className="headerHome">
+            <header className='welcomeHelp'>
           <h1>Solicitudes Agendadas</h1>
         </header>
-        
             
+            <Navbar />
         </div>
-        <Navbar />
         </Fragment>
     )
 }

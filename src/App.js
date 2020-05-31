@@ -7,12 +7,12 @@ import Home from "./Components/Home";
 import Login from "./Components/Login";
 import LeafMap from "./Components/LeafMap"
 import WhatDoYouNeed from "./Components/WhatDoYouNeed";
-import MedicalRecord from "./Components/MedicalRecord"
-import Programming from "./Components/Programming"
+import MedicalRecord from "./Components/MedicalRecord";
+import Programming from "./Components/Programming";
 
 function App() {
   return (
-    <div>
+   <div>
       <Router>
         <Switch>
           <Route exact path="/">
@@ -29,6 +29,7 @@ function App() {
           </Route>
           <Route path="/need">
             <WhatDoYouNeed />
+          </Route>
           <Route path="/MedicalRecord">
             <MedicalRecord />
           </Route>
@@ -37,7 +38,9 @@ function App() {
           </Route>
         </Switch>
       </Router>
-    </div>
+      
+      </div>
+   
   );
 }
 
