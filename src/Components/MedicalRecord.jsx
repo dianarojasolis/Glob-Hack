@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { db } from "../BackEnd/firebase";
 import "firebase/firestore";
 import '../App.css'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Navbar from "./Navbar";
 
 const MedicalRecord = () => {
@@ -82,15 +82,15 @@ const MedicalRecord = () => {
 
   return (
     <Fragment>
-        <header>
+        <header className="headerMedical">
           <h1>Ficha Médica</h1>
         </header>
       
 
       <div className="container">
-        <form onSubmit={saveData} className="form-group col-md-6">
+        <form onSubmit={saveData} className="form-group col-sm-12">
           <div className="row">
-          <div className="col-sm-12 mt-5">
+          <div className="col-sm-12 ">
             <label>Nombre paciente</label>
           </div>
           <div>
@@ -105,7 +105,7 @@ const MedicalRecord = () => {
             />
             </div>
             < div className="row">
-          <div className="col-sm-12 mt-5">
+          <div className="col-sm-12 md-6">
             <label>Edad</label>
             </div>
             <div>
@@ -120,7 +120,7 @@ const MedicalRecord = () => {
             </div>
           
             < div className="row">
-          <div className="col-sm-12 mt-5">
+          <div className="col-sm-12 md-6">
             <label>Peso</label>
             </div>
             <div>
@@ -135,7 +135,7 @@ const MedicalRecord = () => {
             </div>
           
           < div className="row">
-          <div className="col-sm-12 mt-5">
+          <div className="col-sm-12 md-6">
             <label>Altura</label>
             </div>
             <div>
@@ -151,7 +151,7 @@ const MedicalRecord = () => {
             </div>
           
           < div className="row"></div>
-          <div className="col-sm-12 mt-5">
+          <div className="col-sm-12 md-6">
             <label>Patología</label>
             </div>
             <div>
@@ -169,7 +169,7 @@ const MedicalRecord = () => {
 
          
           < div className="row">
-          <div className="col-sm-12 mt-5">
+          <div className="col-sm-12 md-6">
             <label>Alérgias</label>
             </div>
             </div>
@@ -188,7 +188,7 @@ const MedicalRecord = () => {
             
          
            < div className="row">
-          <div className="col-sm-12 mt-5">
+          <div className="col-sm-12 md-6">
             <label>Medicamentos</label>
             </div>
             </div>
@@ -204,7 +204,7 @@ const MedicalRecord = () => {
           </div> 
 
           < div className="row">
-          <div className="col-sm-12 mt-5">
+          <div className="col-sm-12 md-6">
             <label>Tipo de sangre</label>
             </div>
             </div>
@@ -222,12 +222,12 @@ const MedicalRecord = () => {
             
           
          < div className="row">
-          <div className="col-sm-12 mt-5">
+          <div className="col-sm-12 md-6">
             <label>Nota adicional</label>
             </div>
             </div>
 
-            <div className="form-group col-md-6">
+            <div className="form-group col-ms-12">
             <input
             className="form-control"
               type="text"
@@ -236,10 +236,11 @@ const MedicalRecord = () => {
               onChange={(e) => setMessage(e.target.value)}
             />
           </div>
-
+        <Link to="/Home">
           <button type="submit" className="Button">
             GUARDAR
           </button>
+          </Link>
         </form>
       </div>
 

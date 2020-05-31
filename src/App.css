@@ -9,21 +9,21 @@ button{
     color: white;
     border: 2px;
     border-radius: 5px;
-    width:230px;
+    width:302px;
     height: 50px;
     margin: 8px;
 }
 
 label{
     
-    margin:none;
+    margin:10px;
     font-family: Roboto;
     font-size: 16px;
 }
 input{
     margin: 8px;
     border-color: #EFEFEF;;
-    width: 220px;
+    width: 302px;
     height: 30px;
     border-radius: 5px;
     border: 0,5px;
@@ -38,23 +38,23 @@ input{
 }
 
 .container{
+
     display: flex;
    align-items: flex-start;
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    width: 100vh;
-    height: 100%;
+    padding-top: 5px;
 
 
 }
 
 .Prevension{
 
-    color: wh;
+    color: white;
     margin: 8px;
     border-color: #EFEFEF;;
-    width: 220px;
+    width: 302px;
     height: 30px;
     border-radius: 5px;
     border: 0,5px;
@@ -69,7 +69,6 @@ input{
     font-family: "Roboto";
     font-size: 40px;
     color: #235763;
-    
     height: 3em;
     background: #fff;
     width: 100%;
@@ -90,11 +89,6 @@ p{
 
   }
 
-  h1{
-      size: 25px;
-      color: #235763;
-  }
-
   .headerHomeProg {
     display: flex;
     flex-direction: column;
@@ -106,3 +100,28 @@ p{
     background: #fff;
     width: 100%;
   }
+.headerMedical{
+    width: 100%;
+    border: 1px ;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    align-items: center;
+    font-family: "Roboto";
+    color: #235763;
+    height: 2em;
+    background: #fff;
+    width: 100%;
+}
+
+.headerMedicalHome{
+    display: flex;
+    padding-top: 40px;
+    align-items: center;
+    font-family: "Roboto";
+    color: #235763;
+    height: 2em;
+    background: #fff;
+    width: 100%;
+}

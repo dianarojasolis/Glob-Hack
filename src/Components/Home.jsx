@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-
 import '../App.css'
 import Navbar from "./Navbar";
 import { db } from "../BackEnd/firebase";
@@ -26,17 +25,17 @@ const Home = () => {
   return (
     <Fragment>
       <div>
-        <header >
+        <header className="headerMedicalHome">
           <h1>Ficha Médica</h1>
         </header>
         <section>
-          <div container>
-            <div >
+          <div>
+            <div>
               {medicalReport.map((item) => (
-                <div>
+                <div key={item.id}>
                   <div>
                     {
-                      <div key={item.id}>
+                      <div >
                         <div>
                           <div>
                             <div >
