@@ -1,0 +1,67 @@
+.whatdo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.whatdo-title {
+    color: #235763;
+    margin-top: 50px;
+}
+
+.your-location {
+    width: 80%;
+    background-color: #8B8B8B33;
+    border-style: none;
+    margin-bottom: 30px;
+    height: 40px;
+}
+
+.exam-box {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.exam-box select{
+    width: 100%;
+    height: 40px;
+}
+
+.order-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    width: 80%;
+}
+
+.uploadfile-box input{
+    width: 80%;
+}
+
+.uploadfile-box img {
+    width: 20px;
+}
+
+.when-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    width: 80%;
+}
+
+.when-box select{
+    width: 100%;
+    height: 40px;
+}
+

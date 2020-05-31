@@ -1,45 +1,79 @@
-import React from 'react'
+import React, { useState, useCallback } from 'react'
+import uploadIcon from '../img/upload.png'
+import { Link } from "react-router-dom"
+import '../css/WhatDoYouNeed.css'
+import { db } from '../BackEnd/firebase'
 
 
 const WhatDoYouNeed = () => {
+
+    const [exam, setExam] = useState('')
+    const [whenDate, setWhenDate] = useState('')
+
+    const addAppointment = useCallback(async () => {
+
+        try {
+            await db.collection('medicalAppointment').add({
+                treatment: exam,
+                when: whenDate
+            })
+
+        } catch (error) {
+            console.log(error);
+        }
+
+        setExam('')
+        setWhenDate('')
+        },
+
+        [exam, whenDate],
+    )
+
+
     return (
-        <div>
-        
-            <h2>¿Qué Necesitas?</h2>
+        <div className="whatdo-container">
+            <h2 className="whatdo-title">¿Qué Necesitas?</h2>
 
-            <input type="text" placeholder="Tu ubicación" disabled />
+            <input type="text" placeholder="Tu ubicación" disabled className="your-location" />
 
-            <div>   
-                    <label htmlFor="">Tratamiento o examen a realizar</label>
-                    <select name="" id="">
-                        <option value="select"></option>
-                        <option value="ecografia">Ecografía</option>
-                        <option value="examenOrina">Examen de orina</option>
-                        <option value="examenSangre">Examen de sangre</option>
-                        <option value="inyeccionNeurobionta">Inyección Neurobionta</option>
-                        <option value="revisionDermatologica">Revisión Dermatológica</option>
-                        <option value="taco">TACO</option>
-                        <option value="endovenoso">Tratamiento endovenoso</option>
-                        <option value="psicologica">Visita Psicológica</option>
-                        <option value="psiquiatrica">Visita Psiquiátrica</option>
-                        <option value="reumatologica">Visita Reumatológica</option>
-                    </select>
+            <div className="exam-box">
+                <p>Tratamiento o examen a realizar</p>
+                <select onChange={e => setExam(e.target.value)}>
+                    <option value="select"></option>
+                    <option value="Ecografia">Ecografía</option>
+                    <option value="Examen de orina">Examen de orina</option>
+                    <option value="Examen de sangre">Examen de sangre</option>
+                    <option value="Inyección Neurobionta">Inyección Neurobionta</option>
+                    <option value="Revisión Dermatológica">Revisión Dermatológica</option>
+                    <option value="TACO">TACO</option>
+                    <option value="Tratamiento endovenoso">Tratamiento endovenoso</option>
+                    <option value="Visita Psicológica">Visita Psicológica</option>
+                    <option value="Visita Psiquiátrica">Visita Psiquiátrica</option>
+                    <option value="Visita Reumatológica">Visita Reumatológica</option>
+                </select>
+            </div>
+
+            <div className="order-box">
+                <p>Subir orden médica</p>
+                <div className="uploadfile-box">
+                    <input type="file" />
+                    <img src={uploadIcon} alt="subir imagen" />
                 </div>
+            </div>
 
-                <div>
-                    <label htmlFor="">Subir orden médica</label>
+            <div className="when-box">
+                <p>Para cuando lo necesitas</p>
+                <select onChange={e => setWhenDate(e.target.value)}>
+                    <option value="select"></option>
+                    <option value="Lo antes posible">Lo antes posible</option>
+                    <option value="Durante el día">Durante el día</option>
+                    <option value="Agendar cita">Agendar cita</option>
+                </select>
+            </div>
 
-                </div>
-
-                <div>
-                    <label htmlFor="">Para cuando lo necesitas</label>
-                    <select>
-                        <option value="select"></option>
-                        <option value="">Lo antes posible</option>
-                        <option value="">Durante el día</option>
-                        <option value="">Agendar cita</option>
-                    </select>
-                </div>
+            <div>
+                <Link to="/mapend"><button onClick={() => addAppointment()}>Continuar</button></Link>
+            </div>
         </div>
     )
 }
