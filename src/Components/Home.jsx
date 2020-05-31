@@ -7,7 +7,7 @@ const Home = () => {
         <Fragment>
         <div>
             <header className="headerHome">
-          <h1>Ficha Médica</h1>
+          <h1>Profile</h1>
         </header>
             
             <Navbar />
