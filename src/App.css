@@ -10,30 +10,51 @@ button{
     border: 2px;
     border-radius: 5px;
     width:230px;
-    height: 40px;
+    height: 50px;
+    margin: 8px;
 }
 
 label{
-    display: flex;
-    align-items: center;
+    
+    margin:none;
     font-family: Roboto;
     font-size: 16px;
 }
 input{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: rgb(220, 217, 217);
+    margin: 8px;
+    border-color: #EFEFEF;;
     width: 220px;
+    height: 30px;
     border-radius: 5px;
     border: 0,5px;
+    
 }
 
 .Logo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 20px;
     width: 142px;
     height: 74px;
+  
 }
 
+.container{
+    display: flex;
+   align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 100vh;
+    height: 100%;
+
+
+}
+
+.Prevension{
+
+    margin: 8px;
+    border-color: #EFEFEF;;
+    width: 220px;
+    height: 30px;
+    border-radius: 5px;
+    border: 0,5px;
+}

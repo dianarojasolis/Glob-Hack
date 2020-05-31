@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 import { auth, db } from "../BackEnd/firebase";
 import { Link, withRouter } from "react-router-dom";
-import Logo from "../img/logo.png";
+import Logo from '../img/logo.png'
 
 const CreateAccount = (props) => {
   const [email, setEmail] = React.useState("");
@@ -12,6 +12,7 @@ const CreateAccount = (props) => {
   const [password, setPassword] = React.useState("");
   const [error, setError] = React.useState(null);
   // const [register, setRegister] = React.useState(true);
+
 
   const processingData = (e) => {
     e.preventDefault();
@@ -42,7 +43,6 @@ const CreateAccount = (props) => {
     console.log("correcto");
     setError(null);
   };
-
   const registerAccount = React.useCallback(async () => {
     try {
       const res = await auth.createUserWithEmailAndPassword(email, password);
@@ -75,69 +75,118 @@ const CreateAccount = (props) => {
     }
   }, [name, rut, phone, prevision, email, password, props.history]);
 
-  return (
-    <div>
-      <form onSubmit={processingData}>
-        {error && <div>{error}</div>}
 
-        <input
-          type="text"
-          label="Nombre paciente"
-          placeholder="Juan Pérez Pérez"
-          name="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+    return (
 
-        <input
-          type="num"
-          label="RUT paciente"
-          placeholder="12.345.678-9"
+     
+            
+  
+        <div>
+            
+            <form onSubmit={processingData}>
+             <div className="container">
+             <img className="Logo" alt="" src={Logo} />
+            <div className="row ">
+            <div className="col-sm-12 mt-5">
+              <label>Nombre</label>
+              </div>
+          </div>
+          
+          
+          <input
+            type="text"
+            placeholder="Juan Pérez Pérez"
+            name="name"
+            value={name}
+            onChange={e => setName(e.target.value)}
+          />
+          
+            <div className="row">
+            <div className="col-sm-12 mt-5">
+          <label>Rut paciente</label>
+          </div>
+          </div>
+          <div className="row">
+            <div className="col-sm-12 mt-5">
+          <input className="date"
+          type="num" 
+          placeholder="12.345.678-9" 
           value={rut}
-          onChange={(e) => setRut(e.target.value)}
-        />
+          onChange={e => setRut(e.target.value)}
+          />
+          </div>
+          </div>
+          <div className="row">
+          <div className="col-sm-12 mt-5">
+          <label>Previsión de salud del paciente</label>
+          </div>
+          </div>
+          <select className="Prevension" onChange={e => setPrevision( e.target.value)}>
+            <option value="select"></option>
+            <option value="fonasa">Fonasa</option>
+            <option value="isapre">Isapre</option>
+          </select>
 
-        <select onChange={(e) => setPrevision(e.target.value)}>
-          <option value="select"></option>
-          <option value="fonasa">Fonasa</option>
-          <option value="isapre">Isapre</option>
-        </select>
-
-        <input
-          type="num"
-          label="Telèfono cuidador o paciente"
+          <div className="row">
+          <div className="col-sm-12 mt-5">
+          </div><label>Teléfono cuidador o paciente</label>
+          </div>
+          <input 
+          type="num" 
           placeholder="+56"
           value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-        />
+          onChange={e => setPhone(e.target.value)}
+          />
 
-        <input
-          type="email"
-          label="Correo cuidador o paciente"
-          placeholder="example@gmail.com"
-          name="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+          <div className="row">
+          <div className="col-sm-12 mt-5">
+          <label>Correo cuidador o paciente</label>
+          </div>
+          </div>
+          <input
+            type="email"
+            placeholder="juanperezprez@gmail.com"
+            name="email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+          />
+          
+          <div className="row">
+          <div className="col-sm-12 mt-5"></div>
+          <label>Rut</label>
+          </div>
+          
+          <input 
+            type="password"
+            placeholder="******"
+            name="password"
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+          />
 
-        <input
-          type="password"
-          placeholder="******"
-          name="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-
-        <button onClick={() => registerAccount()} type="button">
-          Registrarme
-        </button>
-
-        <Link to="/Login">
+           <div className="row">
+            <div className="col-sm-12 mt-5">
+          <button className="Button"
+          type="submit"
+          >
+            Continuar     
+          </button> 
+          <div className="row">
+            <div className="col-sm-12 mt-5"></div>
+          <Link to="/Login">
           <button bgcolor="true">¿ya estas registrado?</button>
         </Link>
+        </div>
+          </div>
+          </div>
+          </div>
+          ©
+          
+
       </form>
-    </div>
-  );
-};
+        </div>
+    )
+}
+
 
 export default withRouter(CreateAccount);
