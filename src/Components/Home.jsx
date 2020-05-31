@@ -30,13 +30,13 @@ const Home = () => {
           <h5 className="titleHome">Ficha Médica</h5>
         </header>
         <section>
-          <div container>
+          <div>
             <div>
               {medicalReport.map((item) => (
-                <div>
+                <div key={item.id}>
                   <div>
                     {
-                      <div key={item.id}>
+                      <div >
                         <div>
                           <div>
                             <div>
