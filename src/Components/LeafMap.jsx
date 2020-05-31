@@ -1,8 +1,9 @@
 import React, { useState, useEffect, Fragment } from 'react'
-import '../Mapa.css'
+import '../Maps.css'
 
 import MapContainer from './MapContainer'
 import useGeolocation from 'react-hook-geolocation'
+import { Link } from 'react-router-dom'
 
 const LeafMap = () => {
 
@@ -39,6 +40,10 @@ const LeafMap = () => {
                     zoom={zoom}
                     medicalStaff={medicalStaff}
                 />
+            </div>
+
+            <div>
+                <Link to="/need"> <button>¿Qué Necesitas?</button> </Link>
             </div>
         </Fragment>
     )

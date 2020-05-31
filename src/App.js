@@ -6,6 +6,7 @@ import CreateAccount from "./Components/CreateAccount.jsx";
 import Home from "./Components/Home.jsx";
 import Login from "./Components/Login.jsx";
 import LeafMap from "./Components/LeafMap"
+import WhatDoYouNeed from "./Components/WhatDoYouNeed";
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path="/map">
             <LeafMap />
+          </Route>
+          <Route path="/need">
+            <WhatDoYouNeed />
           </Route>
         </Switch>
       </Router>
