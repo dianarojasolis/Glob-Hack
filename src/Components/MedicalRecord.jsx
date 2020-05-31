@@ -5,6 +5,7 @@ import "firebase/firestore";
 import Navbar from "./Navbar";
 
 const MedicalRecord = () => {
+    
   const [name, setName] = React.useState("");
   const [age, setAge] = React.useState("");
   const [weight, setWeight] = React.useState("");
@@ -61,16 +62,8 @@ const MedicalRecord = () => {
         bloodType: bloodType,
         message: message,
       };
-      const data = await db.collection("Medical-Reacord").add(newMedicalRecord);
+      await db.collection("Medical-Reacord").add(newMedicalRecord);
 
-      setName([...name, { ...newMedicalRecord, id: data.id }]);
-      setAge([...age, { ...newMedicalRecord, id: data.id }]);
-      setWeight([...weight, { ...newMedicalRecord, id: data.id }]);
-      setPathology([...pathology, { ...newMedicalRecord, id: data.id }]);
-      setAllergies([...allergies, { ...newMedicalRecord, id: data.id }]);
-      setMedicines([...medicines, { ...newMedicalRecord, id: data.id }]);
-      setBloodType([...bloodType, { ...newMedicalRecord, id: data.id }]);
-      setMessage([...message, { ...newMedicalRecord, id: data.id }]);
       
 
       setName("");

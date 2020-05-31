@@ -9,6 +9,7 @@ import LeafMap from "./Components/LeafMap"
 import WhatDoYouNeed from "./Components/WhatDoYouNeed";
 import MedicalRecord from "./Components/MedicalRecord";
 import Programming from "./Components/Programming";
+import MapEnd from "./Components/MapEnd";
 
 function App() {
   return (
@@ -33,8 +34,13 @@ function App() {
           <Route path="/MedicalRecord">
             <MedicalRecord />
           </Route>
+          
           <Route path="/Programming">
             <Programming />
+          </Route>
+
+          <Route path="/mapend">
+            <MapEnd />
           </Route>
         </Switch>
       </Router>

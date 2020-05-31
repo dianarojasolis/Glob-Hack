@@ -39,47 +39,47 @@ const Home = () => {
                       <div key={item.id}>
                         <div>
                           <div>
-                            <div>
+                            <div >
                               <label>Nombre paciente</label>
                               <p>{item.name}</p>
                             </div>
 
-                            <div>
+                            <div className="wrapBorder">
                               <label>Edad</label>
                               <p>{item.age}</p>
                             </div>
 
-                            <div>
+                            <div className="wrapBorder">
                               <label>Peso</label>
                               <p>{item.weight}</p>
                             </div>
 
-                            <div>
+                            <div className="wrapBorder">
                               <label>Altura</label>
-                              <p>{item.height}</p>
+                              <p className="inputHeight">{item.height}</p>
                             </div>
 
-                            <div>
+                            <div className="wrapBorder">
                               <label>Patología</label>
                               <p>{item.pathology}</p>
                             </div>
 
-                            <div>
+                            <div className="wrapBorder">
                               <label>Alergías</label>
                               <p>{item.allergies}</p>
                             </div>
 
-                            <div>
+                            <div className="wrapBorder">
                               <label>Medicamentos</label>
                               <p>{item.medicines}</p>
                             </div>
 
-                            <div>
+                            <div className="wrapBorder">
                               <label>Tipo de sangre</label>
                               <p>{item.bloodType}</p>
                             </div>
 
-                            <div>
+                            <div className="wrapBorder">
                               <label>Nota adicional</label>
                               <p>{item.message}</p>
                             </div>
