@@ -32,24 +32,24 @@ const MapEnd = () => {
 
     useEffect(() => {
         const getInfoExams = async () => {
-          try {
-            const data = await db.collection('medicalAppointment').get()
-            const arrayAppointment = data.docs.map(doc => ({ id: doc.id, ...doc.data() }))
-            setDataExams(arrayAppointment)
-            console.log(arrayAppointment);
-    
-          } catch (error) {
-            console.log(error)
-          }
+            try {
+                const data = await db.collection('medicalAppointment').get()
+                const arrayAppointment = data.docs.map(doc => ({ id: doc.id, ...doc.data() }))
+                setDataExams(arrayAppointment)
+                console.log(arrayAppointment);
+
+            } catch (error) {
+                console.log(error)
+            }
         }
-    
+
         getInfoExams()
-      }, [])
+    }, [])
 
 
     const latlng = { lat: geolocation.latitude, lng: geolocation.longitude };
     let center = latlng;
-    let zoom = 16;
+    let zoom = 12;
 
     return (
         <Fragment>
@@ -61,16 +61,16 @@ const MapEnd = () => {
                         medicalStaff={medicalStaff}
                     />
                 </div>
-
-                {
-                    dataExams.map(item => (
-                        <div key={item.id}>
-                            <p>{item.treatment}</p>
-                            <p>{item.when}</p>
-                            <p>{item.arrive}</p>
-                        </div>
-                    ))
-                }
+                <div className="appointment-container">
+                    {
+                        dataExams.map(item => (
+                            <div key={item.id}>
+                                <p className="font-exam">{item.treatment}</p>
+                                <p className="font-arrive">{item.when}</p>
+                            </div>
+                        ))
+                    }
+                </div>
 
                 <div className="mapend-button-container">
                     <button>Confirmar Tratamiento</button>

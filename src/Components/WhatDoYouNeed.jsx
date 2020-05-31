@@ -15,8 +15,7 @@ const WhatDoYouNeed = () => {
         try {
             await db.collection('medicalAppointment').add({
                 treatment: exam,
-                when: whenDate,
-                arrive: '15 min, llegada aproximada'
+                when: whenDate
             })
 
         } catch (error) {
