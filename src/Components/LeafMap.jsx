@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react'
-import '../Maps.css'
+import '../css/Maps.css'
+import '../css/LeafMap.css'
 
 import MapContainer from './MapContainer'
 import useGeolocation from 'react-hook-geolocation'
@@ -35,16 +36,18 @@ const LeafMap = () => {
 
     return (
         <Fragment>
-            <div>
-                <MapContainer
-                    center={center}
-                    zoom={zoom}
-                    medicalStaff={medicalStaff}
-                />
-            </div>
+            <div className="leafmap-container">
+                <div>
+                    <MapContainer
+                        center={center}
+                        zoom={zoom}
+                        medicalStaff={medicalStaff}
+                    />
+                </div>
 
-            <div>
-                <Link to="/need"> <button>¿Qué Necesitas?</button> </Link>
+                <div className="leafmap-button-container">
+                    <Link to="/need"> <button>¿Qué Necesitas?</button> </Link>
+                </div>
             </div>
 
             <Navbar />

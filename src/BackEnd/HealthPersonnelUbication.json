@@ -125,7 +125,129 @@
         "content": "Carla Andrea",
         "title": "Médico Cirujano",
         "type": "Médicos"
-    }
+
+    },    
+
+   { 
+       "key": "marker17",
+       "position": [-33.4247879, -70.5174976],
+       "content": "Nerea de Ugarte",
+       "title": "Psicóloga",
+       "type": "Médicos"
+    
+    },
+       
+    {
+        "key": "marker18",
+        "position": [-33.3802063, -70.5657955],
+        "content": "Luigi Accatino",
+        "title": "Psiquiatra",
+        "type": "Médicos"
+    },
+        
+   {
+       "key": "marker19",
+       "position": [-33.4397648, -70.6398928],
+       "content": "Sergio Iacobelli",
+       "title": "Reumatólogo",
+       "type": "Médicos"
+   },
+
+   {
+       "key": "marker20",
+       "position": [-33.4397648, -70.6398928],
+       "content": "Crsitian Vera",
+       "title": "Dermatólogo",
+       "type": "Médicos"
+   },
+
+   {
+       "key": "marker21",
+       "position": [0.93333, -77.75],
+       "content": "Marcel Sanhueza",
+       "title": "Gastronterólogo",
+       "type": "Médicos"
+   },
+
+   {
+       "key": "marker22",
+       "position": [0.93333, -77.75],
+       "content": "Marcel Sanhueza",
+       "title": "Gastronterólogo",
+       "type": "Médicos"
+   },
+
+   {
+    "key": "marker23",
+    "position": [-33.5910724, -70.5795682],
+    "content": "Alfonso Díaz",
+    "title": "Endocrinólogo",
+    "type": "Médicos"
+   },
+
+   {
+    "key": "marker24",
+    "position": [-33.5910724, -70.5795682],
+    "content": "Marcela Fernandez",
+    "title": "Nefróloga",
+    "type": "Médicos"
+   },
+
+   {
+    "key": "marker25",
+    "position": [-33.4166169, -70.5957122],
+    "content": "Raúl Maza",
+    "title": "Cardiólogo",
+    "type": "Médicos"
+   },
+ 
+   {
+    "key": "marker26",
+    "position": [-33.4543304, -70.600582],
+    "content": "Martin Rivas",
+    "title": "Cardiólogo",
+    "type": "Médicos"
+   },
+
+   {
+    "key": "marker27",
+    "position": [-33.5307144, -70.5440272],
+    "content": "Laura Cortéz",
+    "title": "Nefróloga",
+    "type": "Médicos"
+   },
+
+   {
+    "key": "marker28",
+    "position": [-33.4288379, -70.6113373],
+    "content": "Mario Ortéga",
+    "title": "Nefrólogo",
+    "type": "Médicos"
+   },
+
+   {
+    "key": "marker29",
+    "position": [18.5042704, -69.9468787],
+    "content": "Carla Balbontin",
+    "title": "Dermatóloga",
+    "type": "Médicos"
+   },
+
+   {
+    "key": "marker30",
+    "position": [-33.5176382, -70.6018982],
+    "content": "Melisa Rodriguéz",
+    "title": "Reumatóloga",
+    "type": "Médicos"
+   }
+ 
+ 
+ 
+
+
+       
+        
+    
 
     
 ]
