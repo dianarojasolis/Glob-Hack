@@ -31,8 +31,12 @@ const Login = (props) => {
   }, [email, password, props.history]);
 
   return (
+
+    
     <div>
-      <h1>Login</h1>
+      <header className="headerLogin">
+    <h1>Login</h1>
+  </header>
 
       <form>
         {error && <div>{error}</div>}
@@ -58,7 +62,7 @@ const Login = (props) => {
         </button>
 
         <Link to="/">
-          <button bgColor="true">¿No tienes cuenta?</button>
+          <button>¿No tienes cuenta?</button>
         </Link>
       </form>
     </div>
