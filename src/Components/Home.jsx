@@ -9,7 +9,7 @@ const Home = () => {
   React.useEffect(() => {
     const obtenerDatos = async () => {
       try {
-        const data = await db.collection("Medical-Reacord").get();
+        const data = await db.collection("Medical-Record").get();
         const arrayData = data.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
@@ -33,7 +33,7 @@ const Home = () => {
             <div>
               {medicalReport.map((item) => (
                 <div key={item.id}>
-                  <div>
+                  <div >
                     {
                       <div >
                         <div>

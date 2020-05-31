@@ -2,10 +2,11 @@ import React, { Fragment } from "react";
 import { db } from "../BackEnd/firebase";
 import "firebase/firestore";
 import '../App.css'
-import { Link } from 'react-router-dom'
+
+import { withRouter } from "react-router-dom";
 import Navbar from "./Navbar";
 
-const MedicalRecord = () => {
+const MedicalRecord = (props) => {
     
   const [name, setName] = React.useState("");
   const [age, setAge] = React.useState("");
@@ -63,7 +64,7 @@ const MedicalRecord = () => {
         bloodType: bloodType,
         message: message,
       };
-      await db.collection("Medical-Reacord").add(newMedicalRecord);
+      await db.collection("Medical-Record").add(newMedicalRecord);
 
       
 
@@ -75,6 +76,9 @@ const MedicalRecord = () => {
       setMedicines("");
       setBloodType("");
       setMessage("");
+      props.history.push("/Home");
+
+
     } catch (error) {
       console.log(error);
     }
@@ -236,11 +240,10 @@ const MedicalRecord = () => {
               onChange={(e) => setMessage(e.target.value)}
             />
           </div>
-        <Link to="/Home">
+        
           <button type="submit" className="Button">
             GUARDAR
           </button>
-          </Link>
         </form>
       </div>
 
@@ -249,4 +252,4 @@ const MedicalRecord = () => {
   );
 };
 
-export default MedicalRecord;
+export default  withRouter (MedicalRecord);
