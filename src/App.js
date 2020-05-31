@@ -6,9 +6,17 @@ import CreateAccount from "./Components/CreateAccount.jsx";
 import Home from "./Components/Home.jsx";
 import Login from "./Components/Login.jsx";
 import LeafMap from "./Components/LeafMap"
+<<<<<<< HEAD
 import WhatDoYouNeed from "./Components/WhatDoYouNeed";
 import MedicalRecord from "./Components/MedicalRecord";
 import Programming from "./Components/Programming";
+=======
+
+import WhatDoYouNeed from "./Components/WhatDoYouNeed";
+import MedicalRecord from "./Components/MedicalRecord";
+import Programming from "./Components/Programming";
+
+>>>>>>> 6acd3b405032365fd083bca817de8cc3b7fdcb4f
 
 function App() {
   return (
@@ -27,6 +35,11 @@ function App() {
           <Route path="/map">
             <LeafMap />
           </Route>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 6acd3b405032365fd083bca817de8cc3b7fdcb4f
           <Route path="/need">
             <WhatDoYouNeed />
           </Route>
@@ -36,6 +49,10 @@ function App() {
           <Route path="/Programming">
             <Programming />
           </Route>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6acd3b405032365fd083bca817de8cc3b7fdcb4f
         </Switch>
       </Router>
       

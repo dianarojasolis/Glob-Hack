@@ -5,10 +5,12 @@ import Navbar from './Navbar'
 const Programming = () => {
     return (
         <Fragment>
-        <div>
-            <header className='welcomeHelp'>
+
+<header className="headerHome">
           <h1>Solicitudes Agendadas</h1>
         </header>
+        <div>
+         
             
             <Navbar />
         </div>
