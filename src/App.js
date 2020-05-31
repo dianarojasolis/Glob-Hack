@@ -6,6 +6,7 @@ import CreateAccount from "./Components/CreateAccount";
 import Home from "./Components/Home";
 import Login from "./Components/Login";
 import LeafMap from "./Components/LeafMap"
+import WhatDoYouNeed from "./Components/WhatDoYouNeed";
 import MedicalRecord from "./Components/MedicalRecord"
 import Programming from "./Components/Programming"
 
@@ -26,6 +27,8 @@ function App() {
           <Route path="/map">
             <LeafMap />
           </Route>
+          <Route path="/need">
+            <WhatDoYouNeed />
           <Route path="/MedicalRecord">
             <MedicalRecord />
           </Route>
