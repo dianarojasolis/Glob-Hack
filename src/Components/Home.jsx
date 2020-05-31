@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 
-import "./Home.css";
+import '../App.css'
 import Navbar from "./Navbar";
 import { db } from "../BackEnd/firebase";
 
@@ -26,12 +26,12 @@ const Home = () => {
   return (
     <Fragment>
       <div>
-        <header className="headerHome">
-          <h5 className="titleHome">Ficha Médica</h5>
+        <header >
+          <h1>Ficha Médica</h1>
         </header>
         <section>
           <div container>
-            <div item xs={12} sm={12} md={12}>
+            <div >
               {medicalReport.map((item) => (
                 <div>
                   <div>

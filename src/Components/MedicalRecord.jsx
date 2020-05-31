@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { db } from "../BackEnd/firebase";
 import "firebase/firestore";
+import '../App.css'
 // import { Link } from 'react-router-dom'
 import Navbar from "./Navbar";
 
@@ -81,7 +82,7 @@ const MedicalRecord = () => {
 
   return (
     <Fragment>
-        <header className="headerHome">
+        <header>
           <h1>Ficha Médica</h1>
         </header>
       
