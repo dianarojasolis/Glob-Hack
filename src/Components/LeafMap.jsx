@@ -4,6 +4,7 @@ import '../Maps.css'
 import MapContainer from './MapContainer'
 import useGeolocation from 'react-hook-geolocation'
 import { Link } from 'react-router-dom'
+import Navbar from './Navbar'
 
 const LeafMap = () => {
 
@@ -45,6 +46,8 @@ const LeafMap = () => {
             <div>
                 <Link to="/need"> <button>¿Qué Necesitas?</button> </Link>
             </div>
+            
+            <Navbar />
         </Fragment>
     )
 }

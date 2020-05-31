@@ -39,8 +39,8 @@ const Login = (props) => {
 
         <input
           type="num"
-          label="RUT paciente"
-          placeholder="12.345.678-9"
+          label="Correo cuidador o paciente"
+          placeholder="example@gmail.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
