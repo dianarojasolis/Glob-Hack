@@ -1,10 +1,11 @@
 import React, { Fragment } from "react";
 import { db } from "../BackEnd/firebase";
 import "firebase/firestore";
-// import { Link } from 'react-router-dom'
+import { withRouter } from "react-router-dom";
 import Navbar from "./Navbar";
 
-const MedicalRecord = () => {
+const MedicalRecord = (props) => {
+    
   const [name, setName] = React.useState("");
   const [age, setAge] = React.useState("");
   const [weight, setWeight] = React.useState("");
@@ -61,16 +62,8 @@ const MedicalRecord = () => {
         bloodType: bloodType,
         message: message,
       };
-      const data = await db.collection("Medical-Reacord").add(newMedicalRecord);
+      await db.collection("Medical-Record").add(newMedicalRecord);
 
-      setName([...name, { ...newMedicalRecord, id: data.id }]);
-      setAge([...age, { ...newMedicalRecord, id: data.id }]);
-      setWeight([...weight, { ...newMedicalRecord, id: data.id }]);
-      setPathology([...pathology, { ...newMedicalRecord, id: data.id }]);
-      setAllergies([...allergies, { ...newMedicalRecord, id: data.id }]);
-      setMedicines([...medicines, { ...newMedicalRecord, id: data.id }]);
-      setBloodType([...bloodType, { ...newMedicalRecord, id: data.id }]);
-      setMessage([...message, { ...newMedicalRecord, id: data.id }]);
       
 
       setName("");
@@ -81,6 +74,9 @@ const MedicalRecord = () => {
       setMedicines("");
       setBloodType("");
       setMessage("");
+      props.history.push("/Home");
+
+
     } catch (error) {
       console.log(error);
     }
@@ -226,7 +222,7 @@ const MedicalRecord = () => {
               onChange={(e) => setMessage(e.target.value)}
             />
           </div>
-
+        
           <button type="submit" className="Button">
             GUARDAR
           </button>
@@ -238,4 +234,4 @@ const MedicalRecord = () => {
   );
 };
 
-export default MedicalRecord;
+export default  withRouter (MedicalRecord);

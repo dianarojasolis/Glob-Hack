@@ -61,7 +61,7 @@ const CreateAccount = (props) => {
       setPhone("");
       setRut("");
       setError(null);
-      props.history.push("/Home");
+      props.history.push("/map");
 
       console.log(res.user);
     } catch (error) {
