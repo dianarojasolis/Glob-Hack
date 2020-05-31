@@ -11,6 +11,7 @@ import WhatDoYouNeed from "./Components/WhatDoYouNeed";
 import MedicalRecord from "./Components/MedicalRecord";
 import Programming from "./Components/Programming";
 import MapEnd from "./Components/MapEnd";
+import Admin from "./Components/Admin";
 
 
 function App() {
@@ -44,6 +45,10 @@ function App() {
 
           <Route path="/mapend">
             <MapEnd />
+          </Route>
+
+          <Route path="/admi">
+            <Admin />
           </Route>
         </Switch>
       </Router>
