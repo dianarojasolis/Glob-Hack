@@ -32,7 +32,7 @@ const LeafMap = () => {
 
     const latlng = { lat: geolocation.latitude, lng: geolocation.longitude };
     let center = latlng;
-    let zoom = 16;
+    let zoom = 18;
 
     return (
         <Fragment>

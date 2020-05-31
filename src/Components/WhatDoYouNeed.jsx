@@ -3,6 +3,7 @@ import uploadIcon from '../img/upload.png'
 import { Link } from "react-router-dom"
 import '../css/WhatDoYouNeed.css'
 import { db } from '../BackEnd/firebase'
+import shortid from 'shortid'
 
 
 const WhatDoYouNeed = () => {
@@ -15,7 +16,9 @@ const WhatDoYouNeed = () => {
         try {
             await db.collection('medicalAppointment').add({
                 treatment: exam,
-                when: whenDate
+                when: whenDate,
+                id: shortid.generate(),
+                date: Date.now()
             })
 
         } catch (error) {
