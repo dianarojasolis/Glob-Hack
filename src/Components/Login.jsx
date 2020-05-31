@@ -15,7 +15,7 @@ const Login = (props) => {
       setEmail("");
       setPassword("");
       setError(null);
-      props.history.push("/Home");
+      props.history.push("/map");
     } catch (error) {
       console.log(error);
       if (error.code === "auth/invalid-email") {
