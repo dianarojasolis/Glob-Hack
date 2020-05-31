@@ -31,7 +31,7 @@ const Home = () => {
         </header>
         <section>
           <div container>
-            <div item xs={12} sm={12} md={12}>
+            <div>
               {medicalReport.map((item) => (
                 <div>
                   <div>

@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { db } from "../BackEnd/firebase";
 import "firebase/firestore";
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Navbar from "./Navbar";
 
 const MedicalRecord = () => {
@@ -219,10 +219,11 @@ const MedicalRecord = () => {
               onChange={(e) => setMessage(e.target.value)}
             />
           </div>
-
+        <Link to="/Home">
           <button type="submit" className="Button">
             GUARDAR
           </button>
+          </Link>
         </form>
       </div>
 
