@@ -26,8 +26,8 @@ const Home = () => {
   return (
     <Fragment>
       <div>
-        <header className="headerHome">
-          <h5 className="titleHome">Ficha Médica</h5>
+        <header>
+          <h1>Ficha Médica</h1>
         </header>
         <section>
           <div>
