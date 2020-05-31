@@ -58,7 +58,7 @@ const Login = (props) => {
         </button>
 
         <Link to="/">
-          <button bgColor="true">¿No tienes cuenta?</button>
+          <button>¿No tienes cuenta?</button>
         </Link>
       </form>
     </div>
