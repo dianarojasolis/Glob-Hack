@@ -1,16 +1,41 @@
 .body {
-    background-color: #f2f2f2;
-  }
-  
-  .headerHome {
-      display: flex;
-      flex-direction: column;
-      padding-top: 30px;
-      align-items: center;
-      font-family: "Roboto";
-      font-size: 20px;
-      color: #235763;
-      height: 3em;
-      background: #fff;
-      width: 100%;
-    }
+  background-color: #f2f2f2;
+}
+
+.headerHome {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  align-items: center;
+  font-family: "Roboto";
+  font-size: 20px;
+  color: #235763;
+  height: 3em;
+  background: #fff;
+  width: 100%;
+}
+
+.container {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 auto;
+}
+
+.form {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto";
+  line-height: 1.5;
+  color: #6a6a6a;
+  width : 150px; 
+}
+
+.input {
+  width: 100%;
+  border-radius: 6px;
+  width : 150px; 
+ 
+}
