@@ -6,7 +6,7 @@ import useGeolocation from 'react-hook-geolocation'
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
 
-const LeafMap = () => {
+const MapEnd = () => {
 
     const geolocation = useGeolocation()
     const [medicalStaff, setMedicalStaff] = useState([])
@@ -53,4 +53,4 @@ const LeafMap = () => {
     )
 }
 
-export default LeafMap
+export default MapEnd

@@ -5,12 +5,12 @@
   .headerHome {
       display: flex;
       flex-direction: column;
-      padding-top: 30px;
+      padding-top: 40px;
       align-items: center;
       font-family: "Roboto";
       font-size: 20px;
       color: #235763;
-      height: 3em;
+      height: 2em;
       background: #fff;
       width: 100%;
     }
