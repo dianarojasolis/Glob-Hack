@@ -5,7 +5,7 @@
 .headerHome {
     display: flex;
     flex-direction: column;
-    padding-top: 30px;
+    padding-top: 60px;
     align-items: center;
     font-family: "Roboto";
     font-size: 20px;
@@ -14,3 +14,9 @@
     background: #fff;
     width: 100%;
   }
+p{
+  color: #235763;;
+  
+}
+
+  

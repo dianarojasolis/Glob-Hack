@@ -15,6 +15,7 @@ const CreateAccount = (props) => {
 
 
   const processingData = (e) => {
+    
     e.preventDefault();
 
     if (!name.trim()) {
@@ -84,6 +85,7 @@ const CreateAccount = (props) => {
         <div>
             
             <form onSubmit={processingData}>
+            {error && <div>{error}</div>}
              <div className="container">
              <img className="Logo" alt="" src={Logo} />
             <div className="row ">
@@ -166,15 +168,13 @@ const CreateAccount = (props) => {
 
            <div className="row">
             <div className="col-sm-12 mt-5">
-          <button className="Button"
-          type="submit"
-          >
-            Continuar     
-          </button> 
+            <button onClick={() => registerAccount()} type="button" className="Button">
+          Continuar
+        </button>
           <div className="row">
             <div className="col-sm-12 mt-5"></div>
           <Link to="/Login">
-          <button bgcolor="true">¿ya estas registrado?</button>
+          <button bgcolor="true">¿Ya estas registrado?</button>
         </Link>
         </div>
           </div>
