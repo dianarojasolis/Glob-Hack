@@ -187,7 +187,7 @@ const CreateAccount = (props) => {
           </div>
           </div>
           </div>
-          
+          ©
           
 
       </form>
