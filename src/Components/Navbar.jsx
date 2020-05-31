@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
     return (
         <div className='navbar'>
-            <Link to="/Home" style={{ textDecoration: "none"}}>
+            <Link to="/map" style={{ textDecoration: "none"}}>
                 <div className='divIcon'>
                 <img alt="" src={home}></img>
                  </div>
@@ -20,12 +20,12 @@ const Navbar = () => {
             <img alt="" src={ficha}></img>
             </div>
             </Link>
-            <Link to="/Home" style={{ textDecoration: "none"}}>
+            <Link to="/MedicalRecord" style={{ textDecoration: "none"}}>
                 <div className='divIcon'>
                 <img alt="" src={perfil}></img>
                 </div>
             </Link>
-            <Link to="/Home" style={{ textDecoration: "none"}}>
+            <Link to="/Programming" style={{ textDecoration: "none"}}>
                 <div className='divIcon'>
                 <img alt="" src={calendario}></img>
                 </div>

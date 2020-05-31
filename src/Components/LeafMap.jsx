@@ -3,6 +3,7 @@ import '../Mapa.css'
 
 import MapContainer from './MapContainer'
 import useGeolocation from 'react-hook-geolocation'
+import Navbar from './Navbar'
 
 const LeafMap = () => {
 
@@ -40,6 +41,7 @@ const LeafMap = () => {
                     medicalStaff={medicalStaff}
                 />
             </div>
+            <Navbar />
         </Fragment>
     )
 }

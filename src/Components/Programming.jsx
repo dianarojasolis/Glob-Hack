@@ -1,19 +1,20 @@
 import React, { Fragment } from 'react'
-import Navbar from './Navbar'
-import "./Home.css";
 
-const Home = () => {
+import Navbar from './Navbar'
+
+const Programming = () => {
     return (
         <Fragment>
         <div>
-            <header className="headerHome">
-          <h1>Ficha Médica</h1>
+        <header className="headerHome">
+          <h1>Solicitudes Agendadas</h1>
         </header>
+        
             
-            <Navbar />
         </div>
+        <Navbar />
         </Fragment>
     )
 }
 
-export default Home
+export default Programming

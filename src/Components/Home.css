@@ -1,13 +1,16 @@
+.body {
+  background-color: #f2f2f2;
+}
+
 .headerHome {
     display: flex;
     flex-direction: column;
-    padding-top: 64px;
+    padding-top: 30px;
     align-items: center;
-    font-family: Roboto;
+    font-family: "Roboto";
     font-size: 20px;
     color: #235763;
-    height: 8em;
+    height: 3em;
     background: #fff;
-    border-radius: 6px;
     width: 100%;
   }
