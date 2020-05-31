@@ -32,7 +32,7 @@ const WhatDoYouNeed = () => {
 
     return (
         <div className="whatdo-container">
-            <h2>¿Qué Necesitas?</h2>
+            <h2 className="whatdo-title">¿Qué Necesitas?</h2>
 
             <input type="text" placeholder="Tu ubicación" disabled className="your-location" />
 
@@ -56,11 +56,7 @@ const WhatDoYouNeed = () => {
             <div className="order-box">
                 <p>Subir orden médica</p>
                 <div className="uploadfile-box">
-                    <input
-                        type="file"
-                        className="custom-file-input"
-                        id="inputGroupFile01"
-                    />
+                    <input type="file" />
                     <img src={uploadIcon} alt="subir imagen" />
                 </div>
             </div>
