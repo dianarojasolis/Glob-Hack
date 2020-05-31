@@ -153,7 +153,7 @@ const CreateAccount = (props) => {
           
           <div className="row">
           <div className="col-sm-12 mt-5"></div>
-          <label>Rut</label>
+          <label>Contraseña</label>
           </div>
           
           <input 
