@@ -1,0 +1,13 @@
+.headerHome {
+    display: flex;
+    flex-direction: column;
+    padding-top: 64px;
+    align-items: center;
+    font-family: Roboto;
+    font-size: 20px;
+    color: #235763;
+    height: 8em;
+    background: #fff;
+    border-radius: 6px;
+    width: 100%;
+  }
