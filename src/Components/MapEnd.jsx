@@ -6,6 +6,8 @@ import MapContainer from './MapContainer'
 import useGeolocation from 'react-hook-geolocation'
 import Navbar from './Navbar'
 import { db } from '../BackEnd/firebase'
+import moment from 'moment'
+import 'moment/locale/es'
 
 const MapEnd = () => {
 
@@ -33,10 +35,11 @@ const MapEnd = () => {
     useEffect(() => {
         const getInfoExams = async () => {
             try {
-                const data = await db.collection('medicalAppointment').get()
+                const data = await db.collection('medicalAppointment').limit(1).orderBy('date', 'desc').get()
                 const arrayAppointment = data.docs.map(doc => ({ id: doc.id, ...doc.data() }))
-                setDataExams(arrayAppointment)
                 console.log(arrayAppointment);
+                setDataExams(arrayAppointment)
+            
 
             } catch (error) {
                 console.log(error)
@@ -63,12 +66,13 @@ const MapEnd = () => {
                 </div>
                 <div className="appointment-container">
                     {
-                        dataExams.map(item => (
+                        dataExams.map(item => 
                             <div key={item.id}>
-                                <p className="font-exam">{item.treatment}</p>
-                                <p className="font-arrive">{item.when}</p>
-                            </div>
-                        ))
+                                    <p className="font-exam">{item.treatment}</p>
+                                    <p className="font-arrive">{item.when}</p>
+                                    <p className="font-date">{moment(item.date).format('LLL')} </p>
+                                </div>
+                        )
                     }
                 </div>
 

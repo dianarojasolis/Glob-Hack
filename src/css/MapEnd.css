@@ -7,21 +7,16 @@
 
 .mapend-button-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: 'Roboto', sans-serif;
     margin-top: 20px;
 }
 
 .appointment-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
     align-items: flex-start;
     font-family: 'Roboto', sans-serif;
     color: #453F3F;
     margin-top: 10px;
-    margin-bottom: 20px;
     width: 90%;
     line-height: 10px;
 }
@@ -29,4 +24,8 @@
 .font-exam {
     font-size: 16px;
     font-weight: bold;
+}
+
+.font-date {
+    font-size: 14px;
 }
