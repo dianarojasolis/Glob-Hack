@@ -15,12 +15,12 @@ const Navbar = () => {
                 <img alt="" src={home}></img>
                  </div>
             </Link>
-            <Link>
+            <Link to="/MedicalRecord">
             <div className='divIcon'>
             <img alt="" src={ficha}></img>
             </div>
             </Link>
-            <Link to="/MedicalRecord" style={{ textDecoration: "none"}}>
+            <Link to="/Home" style={{ textDecoration: "none"}}>
                 <div className='divIcon'>
                 <img alt="" src={perfil}></img>
                 </div>
