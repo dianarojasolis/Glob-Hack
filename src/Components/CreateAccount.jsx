@@ -42,13 +42,6 @@ const CreateAccount = (props) => {
     }
     console.log("correcto");
     setError(null);
-
-    // if (register) {
-    //   registerAccount();
-    // }
-    // else {
-    //   login()
-    // }
   };
   const registerAccount = React.useCallback(async () => {
     try {
@@ -93,8 +86,8 @@ const CreateAccount = (props) => {
             <form onSubmit={processingData}>
              <div className="container">
              <img className="Logo" alt="" src={Logo} />
-            <div class="row ">
-            <div class="col-sm-12 mt-5">
+            <div className="row ">
+            <div className="col-sm-12 mt-5">
               <label>Nombre</label>
               </div>
           </div>
@@ -108,13 +101,13 @@ const CreateAccount = (props) => {
             onChange={e => setName(e.target.value)}
           />
           
-            <div class="row">
-            <div class="col-sm-12 mt-5">
+            <div className="row">
+            <div className="col-sm-12 mt-5">
           <label>Rut paciente</label>
           </div>
           </div>
-          <div class="row">
-            <div class="col-sm-12 mt-5">
+          <div className="row">
+            <div className="col-sm-12 mt-5">
           <input className="date"
           type="num" 
           placeholder="12.345.678-9" 
@@ -123,19 +116,19 @@ const CreateAccount = (props) => {
           />
           </div>
           </div>
-          <div class="row">
-          <div class="col-sm-12 mt-5">
+          <div className="row">
+          <div className="col-sm-12 mt-5">
           <label>Previsión de salud del paciente</label>
           </div>
           </div>
-          <select onChange={e => setPrevision( e.target.value)}>
+          <select className="Prevension" onChange={e => setPrevision( e.target.value)}>
             <option value="select"></option>
             <option value="fonasa">Fonasa</option>
             <option value="isapre">Isapre</option>
           </select>
 
-          <div class="row">
-          <div class="col-sm-12 mt-5">
+          <div className="row">
+          <div className="col-sm-12 mt-5">
           </div><label>Teléfono cuidador o paciente</label>
           </div>
           <input 
@@ -145,8 +138,8 @@ const CreateAccount = (props) => {
           onChange={e => setPhone(e.target.value)}
           />
 
-          <div class="row">
-          <div class="col-sm-12 mt-5">
+          <div className="row">
+          <div className="col-sm-12 mt-5">
           <label>Correo cuidador o paciente</label>
           </div>
           </div>
@@ -158,8 +151,8 @@ const CreateAccount = (props) => {
             onChange={e => setEmail(e.target.value)}
           />
           
-          <div class="row">
-          <div class="col-sm-12 mt-5"></div>
+          <div className="row">
+          <div className="col-sm-12 mt-5"></div>
           <label>Rut</label>
           </div>
           
@@ -171,15 +164,15 @@ const CreateAccount = (props) => {
             onChange={e => setPassword(e.target.value)}
           />
 
-           <div class="row">
-            <div class="col-sm-12 mt-5">
+           <div className="row">
+            <div className="col-sm-12 mt-5">
           <button className="Button"
           type="submit"
           >
             Continuar     
           </button> 
-          <div class="row">
-            <div class="col-sm-12 mt-5"></div>
+          <div className="row">
+            <div className="col-sm-12 mt-5"></div>
           <Link to="/Login">
           <button bgcolor="true">¿ya estas registrado?</button>
         </Link>
@@ -197,4 +190,3 @@ const CreateAccount = (props) => {
 
 
 export default withRouter(CreateAccount);
-
