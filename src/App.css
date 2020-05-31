@@ -22,6 +22,7 @@ label{
 }
 input{
     margin: 8px;
+    background-color: white;
     border-color: #EFEFEF;;
     width: 302px;
     height: 30px;
@@ -29,7 +30,16 @@ input{
     border: 0,5px;
     
 }
-
+.selectHeight{
+   
+    background-color: white;
+    margin: 8px;
+    border-color: #EFEFEF;;
+    width: 302px;
+    height: 30px;
+    border-radius: 5px;
+    border: 0,5px;
+}
 .Logo{
     margin: 20px;
     width: 142px;
@@ -50,8 +60,7 @@ input{
 }
 
 .Prevension{
-
-    color: white;
+    background-color: white;
     margin: 8px;
     border-color: #EFEFEF;;
     width: 302px;

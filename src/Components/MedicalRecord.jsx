@@ -139,7 +139,7 @@ const MedicalRecord = () => {
             <label>Altura</label>
             </div>
             <div>
-            <select value={height} onChange={(e) => setHeight(e.target.value)}>
+            <select className="selectHeight" value={height} onChange={(e) => setHeight(e.target.value)}>
               <option value="select"></option>
               <option value="1,60m">1,60m</option>
               <option value="1,60m">1,65m</option>
